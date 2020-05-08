@@ -18,7 +18,7 @@
                 <caption>On submit action</caption>
                 <description>Action to perform on submitting signature</description>
             </property>
-            <property key="onEmptySignature" type="action" required="true">
+            <property key="onEmptySignature" type="action" required="false">
                 <caption>On empty action</caption>
                 <description>Action to perform on submitting an empty signature</description>
             </property>

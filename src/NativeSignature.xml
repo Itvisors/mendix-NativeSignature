@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="com.itvisors.widget.native.nativesignature.NativeSignature" pluginWidget="true" offlineCapable="true" supportedPlatform="Native" 
+    xmlns="http://www.mendix.com/widget/1.0/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Native Signature</name>
+    <description>Signature widget for native apps</description>
+    <icon>iVBORw0KGgoAAAANSUhEUgAAAEEAAABBCAYAAACO98lFAAABs0lEQVR4nO3X3YriQBCG4bpxwTMFQSSNmk7sdOz0X7ov8tujBGfWYZaFZZlUvRAw8cR6qGBCJElbD28ONr0OzBLi85DsEP4EgBUCe4DlnDUCe4DlnBUAkWyBABAJggAQfY+w+WQLXmIPQCQIAkAkALIF7AGIBEEAiARAtoA9AJEgCACRAMgWsAcgEgQBIBKAD/FDKKV8HpYXwP1+hzGGx8DGGHRdByIiay36vketFct3//fX/ePatoVzDufzGUop5JzhnIO1FrVWeO+x2+22h6CUwnKfO+cwjiPGcQQRUc55ewO/yxiDeZ55DPua9x5aa6SUkFLCfr/nhxBCAJtV/6phGHgDxBjRNM36F8i2y+UCrTWmaeINEULAMAx48xjMN+ccbwzvPXLOOJ1OvCHYV0rBOI6IMW53E1JKvw2nlMLxeEQpBd57tG0L7/3PRjDGoO/79UVo+UxE1HXd+n7wfD5hjEHTNNBaI4SAEMLPHn5pefiptSLGCO89YoyotUJrvQ45z/N6fbm2mdtgmiZYa7cxzN/2eDw+vBQdDgfeIDlnXK9X3ghKKdxuN94IkiRJEoN+AfAO0IkbVjBSAAAAAElFTkSuQmCC</icon>
+    <properties>
+        <propertyGroup caption="Data source">
+            <property key="signature" type="attribute" required="true" onChange="onChangeSignature">
+                <caption>Signature</caption>
+                <description>Where the b64 string of the signature will be saved</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="onChangeSignature" type="action" required="true">
+                <caption>On change signature action</caption>
+                <description>Action to perform on submitting signature</description>
+            </property>
+            <property key="autoClear" type="boolean" defaultValue="true" required="true">
+                <caption>Autoclear canvas</caption>
+                <description>Clear canvas automatically on submit</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Captions">
+            <property key="descriptionText" type="string" required="false">
+                <caption>Description text</caption>
+                <description>Default: "Sign above"</description>
+            </property>
+            <property key="clearText" type="string" required="false">
+                <caption>Clear canvas button caption</caption>
+                <description>Default: "Clear"</description>
+            </property>
+            <property key="confirmText" type="string" required="false">
+                <caption>Confirm signature button caption</caption>
+                <description>Default: "Confirm"</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Colors">
+            <property key="buttonBackgroundColor" type="string" required="false">
+                <caption>Button color</caption>
+                <description>Use a valid CSS color (default #3F99F7)</description>
+            </property>
+            <property key="buttonTextColor" type="string" required="false">
+                <caption>Button caption color</caption>
+                <description>Use a valid CSS color (default #FFF)</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

@@ -1,0 +1,33 @@
+{
+  "name": "nativesignature",
+  "widgetName": "NativeSignature",
+  "version": "1.0.0",
+  "description": "Signature widget for native apps",
+  "copyright": "Mendix 2019",
+  "author": "Nathan Ruth",
+  "config": {
+    "widgetPath": "../..//widgets",
+    "projectPath": "../..//"
+  },
+  "packagePath": "com.itvisors.widget.native",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "pluggable-widgets-tools build:js:native",
+    "dev": "pluggable-widgets-tools start:js:native",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:js:native"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Nathan Ruth/nativesignature/issues"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.7.0"
+  },
+  "dependencies": {
+    "big.js": "^5.2.2",
+    "react-native-signature-canvas": "^2.4.0"
+  }
+}

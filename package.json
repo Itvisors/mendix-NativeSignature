@@ -6,8 +6,8 @@
   "copyright": "ITVisors 2020",
   "author": "Nathan Ruth",
   "config": {
-    "widgetPath": "../..//widgets",
-    "projectPath": "../..//"
+    "widgetPath": "./test/widgets",
+    "projectPath": "./test/"
   },
   "packagePath": "com.itvisors.widget.native",
   "scripts": {

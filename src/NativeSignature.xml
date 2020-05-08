@@ -4,19 +4,23 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Native Signature</name>
     <description>Signature widget for native apps</description>
-    <icon>iVBORw0KGgoAAAANSUhEUgAAAEEAAABBCAYAAACO98lFAAABs0lEQVR4nO3X3YriQBCG4bpxwTMFQSSNmk7sdOz0X7ov8tujBGfWYZaFZZlUvRAw8cR6qGBCJElbD28ONr0OzBLi85DsEP4EgBUCe4DlnDUCe4DlnBUAkWyBABAJggAQfY+w+WQLXmIPQCQIAkAkALIF7AGIBEEAiARAtoA9AJEgCACRAMgWsAcgEgQBIBKAD/FDKKV8HpYXwP1+hzGGx8DGGHRdByIiay36vketFct3//fX/ePatoVzDufzGUop5JzhnIO1FrVWeO+x2+22h6CUwnKfO+cwjiPGcQQRUc55ewO/yxiDeZ55DPua9x5aa6SUkFLCfr/nhxBCAJtV/6phGHgDxBjRNM36F8i2y+UCrTWmaeINEULAMAx48xjMN+ccbwzvPXLOOJ1OvCHYV0rBOI6IMW53E1JKvw2nlMLxeEQpBd57tG0L7/3PRjDGoO/79UVo+UxE1HXd+n7wfD5hjEHTNNBaI4SAEMLPHn5pefiptSLGCO89YoyotUJrvQ45z/N6fbm2mdtgmiZYa7cxzN/2eDw+vBQdDgfeIDlnXK9X3ghKKdxuN94IkiRJEoN+AfAO0IkbVjBSAAAAAElFTkSuQmCC</icon>
+    <icon>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</icon>
     <properties>
         <propertyGroup caption="Data source">
-            <property key="signature" type="attribute" required="true" onChange="onChangeSignature">
+            <property key="signature" type="attribute" required="true">
                 <caption>Signature</caption>
                 <description>Where the b64 string of the signature will be saved</description>
                 <attributeTypes>
                     <attributeType name="String"/>
                 </attributeTypes>
             </property>
-            <property key="onChangeSignature" type="action" required="true">
+            <property key="onSubmitSignature" type="action" required="true">
                 <caption>On submit action</caption>
                 <description>Action to perform on submitting signature</description>
+            </property>
+            <property key="onEmptySignature" type="action" required="true">
+                <caption>On empty action</caption>
+                <description>Action to perform on submitting an empty signature</description>
             </property>
             <property key="autoClear" type="boolean" defaultValue="true" required="true">
                 <caption>Autoclear canvas</caption>
@@ -24,17 +28,29 @@
             </property>
         </propertyGroup>
         <propertyGroup caption="Captions">
-            <property key="descriptionText" type="string" required="false">
+            <property key="descriptionText" type="textTemplate" required="false">
                 <caption>Description text</caption>
-                <description>Default: "Sign above"</description>
+                <description></description>
+                <translations>
+                    <translation lang="en_US">Sign above</translation>
+                    <translation lang="nl_NL">Teken hierboven</translation>
+                </translations>
             </property>
-            <property key="clearText" type="string" required="false">
+            <property key="clearText" type="textTemplate" required="false">
                 <caption>Clear button caption</caption>
-                <description>Default: "Clear"</description>
+                <description></description>
+                <translations>
+                    <translation lang="en_US">Clear</translation>
+                    <translation lang="nl_NL">Wissen</translation>
+                </translations>
             </property>
-            <property key="confirmText" type="string" required="false">
+            <property key="confirmText" type="textTemplate" required="false">
                 <caption>Confirm button caption</caption>
-                <description>Default: "Confirm"</description>
+                <description></description>
+                <translations>
+                    <translation lang="en_US">Confirm</translation>
+                    <translation lang="nl_NL">Bevestig</translation>
+                </translations>
             </property>
         </propertyGroup>
         <propertyGroup caption="Colors">

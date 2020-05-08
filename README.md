@@ -11,7 +11,5 @@
 [link to sandbox]
 
 ## Issues, suggestions and feature requests
-[link to GitHub issues]
+https://github.com/Itvisors/mendix-NativeSignature/issues
 
-## Development and contribution
-[specify contribute]

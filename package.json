@@ -3,7 +3,7 @@
   "widgetName": "NativeSignature",
   "version": "1.0.0",
   "description": "Signature widget for native apps",
-  "copyright": "Mendix 2019",
+  "copyright": "ITVisors 2020",
   "author": "Nathan Ruth",
   "config": {
     "widgetPath": "../..//widgets",
@@ -21,7 +21,7 @@
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Nathan Ruth/nativesignature/issues"
+    "url": "https://github.com/Itvisors/mendix-NativeSignature/issues"
   },
   "devDependencies": {
     "@mendix/pluggable-widgets-tools": "^8.7.0"

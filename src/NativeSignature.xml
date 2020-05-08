@@ -15,7 +15,7 @@
                 </attributeTypes>
             </property>
             <property key="onChangeSignature" type="action" required="true">
-                <caption>On change signature action</caption>
+                <caption>On submit action</caption>
                 <description>Action to perform on submitting signature</description>
             </property>
             <property key="autoClear" type="boolean" defaultValue="true" required="true">
@@ -29,11 +29,11 @@
                 <description>Default: "Sign above"</description>
             </property>
             <property key="clearText" type="string" required="false">
-                <caption>Clear canvas button caption</caption>
+                <caption>Clear button caption</caption>
                 <description>Default: "Clear"</description>
             </property>
             <property key="confirmText" type="string" required="false">
-                <caption>Confirm signature button caption</caption>
+                <caption>Confirm button caption</caption>
                 <description>Default: "Confirm"</description>
             </property>
         </propertyGroup>

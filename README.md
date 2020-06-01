@@ -16,6 +16,9 @@ Signature widget for native apps
 - Configure on empty action (i.e. show message when user tries to submit an empty signature).
 - Change button captions or colors.
 
+## Known issues
+- If the dataview containing the widget is placed inside a container widget, the widget will not be visible.
+
 ## Issues, suggestions and feature requests
 https://github.com/Itvisors/mendix-NativeSignature/issues
 

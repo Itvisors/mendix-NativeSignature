@@ -1,13 +1,10 @@
 import { Component, createElement } from "react";
-import Signature from 'react-native-signature-canvas';
-
-
+import Signature from "react-native-signature-canvas";
 
 export class NativeSignature extends Component {
-    
     render() {
         return (
-            <Signature 
+            <Signature
                 descriptionText={this.props.descriptionText}
                 clearText={this.props.clearText}
                 confirmText={this.props.confirmText}
@@ -15,7 +12,7 @@ export class NativeSignature extends Component {
                 onEmpty={this.props.onEmpty}
                 webStyle={this.props.webStyle}
                 autoClear={this.props.autoClear}
-                />
+            />
         );
     }
 }

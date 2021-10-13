@@ -24,10 +24,10 @@
     "url": "https://github.com/Itvisors/mendix-NativeSignature/issues"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^8.7.0"
+    "@mendix/pluggable-widgets-tools": "^9.5.4"
   },
   "dependencies": {
-    "big.js": "^5.2.2",
-    "react-native-signature-canvas": "^2.4.0"
+    "react-native-signature-canvas": "^4.3.0",
+    "react-native-webview": "^11.0.3"
   }
 }

@@ -6,8 +6,9 @@
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
 // Other code you write will be lost the next time you deploy the project.
 import { Big } from "big.js";
-import { Alert, Linking } from "react-native";
+import { Alert, Linking, NativeModules } from "react-native";
 import ImagePicker from "react-native-image-picker";
+import { getLocales } from "react-native-localize";
 
 // BEGIN EXTRA CODE
 // END EXTRA CODE
@@ -73,8 +74,20 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
                 const guid = imageObject.getGuid();
                 // eslint-disable-next-line no-useless-escape
                 const filename = /[^\/]*$/.exec(uri)[0];
-                const onSuccess = () => resolve(true);
-                const onError = (error) => reject(error);
+                const onSuccess = () => {
+                    NativeModules.NativeFsModule.remove(uri).then(() => {
+                        imageObject.set("Name", filename);
+                        mx.data.commit({
+                            mxobj: imageObject,
+                            callback: () => resolve(true),
+                            error: (error) => reject(error)
+                        });
+                    });
+                };
+                const onError = (error) => {
+                    NativeModules.NativeFsModule.remove(uri).then(undefined);
+                    reject(error);
+                };
                 mx.data.saveDocument(guid, filename, {}, blob, onSuccess, onError);
             });
         });
@@ -95,16 +108,32 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     function getOptions() {
         const { maxWidth, maxHeight } = getPictureQuality();
+        const [language] = getLocales().map(local => local.languageCode);
+        const isDutch = language === "nl";
+
         return {
             mediaType: "photo",
             maxWidth,
             maxHeight,
             noData: true,
+            title: isDutch ? "Foto toevoegen" : "Select a photo",
+            cancelButtonTitle: isDutch ? "Annuleren" : "Cancel",
+            takePhotoButtonTitle: isDutch ? "Foto maken" : "Take photo",
+            chooseFromLibraryButtonTitle: isDutch ? "Kies uit bibliotheek" : "Choose from library",
             permissionDenied: {
-                title: "This app does not have access to your camera or photos",
-                text: "To enable access, tap Settings > Permissions and turn on Camera and Storage.",
-                reTryTitle: "Settings",
-                okTitle: "Cancel"
+                title: isDutch
+                    ? "Deze app heeft geen toegang tot uw camera of foto's"
+                    : "This app does not have access to your camera or photos",
+                text: isDutch
+                    ? "Ga naar Instellingen > Privacy om toegang tot uw camera en bestanden te verlenen."
+                    : "To enable access, tap Settings > Privacy and turn on Camera and Photos/Storage.",
+                reTryTitle: isDutch ? "Instellingen" : "Settings",
+                okTitle: isDutch ? "Annuleren" : "Cancel"
+            },
+            storageOptions: {
+                skipBackup: true,
+                cameraRoll: false,
+                privateDirectory: true
             }
         };
     }
